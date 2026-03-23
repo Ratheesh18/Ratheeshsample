@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Form event page
+    </title>
+</head>
+
+<body>
+    <!-- Onsubmit 1  -->
+    <form action="onsubmit" onsubmit="event.preventDefault(); console.log('your form is submitted')">
+        <button type="submit">Register</button>
+    </form>
+    <!-- onsubmit 2 -->
+    <form action="onsubmit" onsubmit="alert('Form submitted')">
+        <input type="text" name="name">
+        <button type="submit">submit</button>
+    </form>
+    <br>
+    <!-- onchange -->
+    <form action="onsubmit">
+        <input type="text" name="name" onchange="alert('value changed')">
+        <button type="submit">submit</button>
+    </form>
+    <br>
+    <!-- onfocus -->
+    <form action="onfocus">
+        <label for="name">text</label>
+        <input type="text" name="name" onfocus="console.log('inputfocused')">
+    </form>
+    <br>
+    <!-- onblur -->
+    <form action="onblur">
+        <label for="name">text</label>
+        <input type="text" name="name" onblur="console.log('input lost focus')">
+    </form>
+
+
+</body>
+
+</html>
